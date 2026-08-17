@@ -18,6 +18,13 @@ public class Quest {
         System.out.println("Terminée : " + this.completed);
     }
 
+    void assignQuest(Adventurer adventurer) {
+        if (this.assignedAdventurer != null) {
+            System.out.println("Quête déjà assigné");
+        }
+        this.assignedAdventurer = adventurer;
+    }
+
     void completeQuest(Adventurer adventurer) {
         if (adventurer.getLevel() < this.requiredLevel) {
             System.out.println("Niveau trop faible");
